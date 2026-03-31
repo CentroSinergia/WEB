@@ -1,64 +1,169 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Centro Holístico - Contacto</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        text-align: center;
-        background: #f4f7f6;
-        color: #333;
-        padding: 20px;
-      }
-      .btn {
-        display: block;
-        width: 80%;
-        max-width: 300px;
-        margin: 15px auto;
-        padding: 15px;
-        text-decoration: none;
-        color: white;
-        border-radius: 50px;
-        font-weight: bold;
-        transition: 0.3s;
-      }
-      .btn-ws {
-        background-color: #25d366;
-      }
-      .btn-call {
-        background-color: #34b7f1;
-      }
-      .btn-ig {
-        background-color: #e1306c;
-      }
-      .btn-pdf {
-        background-color: #555;
-        margin-top: 30px;
-      }
-      img {
-        width: 150px;
-        border-radius: 50%;
-        margin-bottom: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <img src="tu-logo.png" alt="Logo Centro Holístico" />
-    <h2>¡Bienvenidos!</h2>
-    <p>¿Cómo podemos ayudarte hoy?</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centro Holístico Sinergia</title>
+  
+  <!-- Premium Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-color: #1b7ab9;
+      --btn-color: #ffffff;
+      --btn-text: #1b7ab9;
+      --btn-height: 60px; /* Same height for both circle and capsule buttons */
+    }
 
-    <a href="https://wa.me/TUNUMERO" class="btn btn-ws">WhatsApp Directo</a>
-    <a href="tel:+TUNUMERO" class="btn btn-call">Llamar Ahora</a>
-    <a href="https://instagram.com/TUUSUARIO" class="btn btn-ig"
-      >Síguenos en Instagram</a
-    >
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <hr />
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg-color);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
 
-    <a href="portafolio.pdf" class="btn btn-pdf" download
-      >Descargar Portafolio PDF</a
-    >
-  </body>
+    .container {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      flex: 1;
+    }
+
+    .logo-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+    }
+
+    /* Social row (Circular buttons) */
+    .social-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .btn-circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: var(--btn-height);
+      height: var(--btn-height);
+      background-color: var(--btn-color);
+      color: var(--btn-text);
+      border-radius: 50%;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-circle:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-circle svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
+    }
+
+    /* Capsule button */
+    .btn-capsule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: var(--btn-height);
+      background-color: var(--btn-color);
+      color: var(--btn-text);
+      text-decoration: none;
+      border-radius: calc(var(--btn-height) / 2);
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-capsule:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .footer-phone {
+      margin-top: auto;
+      font-size: 1.2rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Header / Logo -->
+    <div class="logo-container">
+      <img src="logo.svg" alt="Centro Holístico Sinergia" class="logo" />
+    </div>
+
+    <!-- Social Links (Circular) -->
+    <div class="social-row">
+      <a href="tel:+573006542118" class="btn-circle" aria-label="Llamar">
+        <svg viewBox="0 0 224.28 224.17">
+          <path d="M112.14,0C50.21,0,0,50.11,0,111.65s50.21,112.52,112.14,112.52,112.14-50.1,112.14-112.52S174.07,0,112.14,0ZM153.56,171.94c-4.86,3-10.49,6.25-15.45,7.77-.05.01-.09.02-.13.04-2.57.73-5.1,1.06-7.57,1.06-14.36,0-26.76-11.06-33.91-17.44-.04-.04-.09-.08-.14-.13-19.11-17.95-34.62-46.5-38.6-71.02,0-.08-.02-.15-.03-.22-1.3-9.79-1.91-22.29,5.01-32.04.05-.07.11-.15.17-.22,4.06-5.29,9.95-8.64,15.15-11.6,1.11-.64,2.23-1.27,3.31-1.92.05-.03.09-.05.13-.08,7.29-4.15,13.77-4.97,19.29-2.45,6.04,2.76,9.96,9.07,11.97,19.29.26,1.28.61,2.67.98,4.15,1.23,4.92,2.62,10.51,1.86,16.41,0,.03,0,.07,0,.1-.65,4.59-3.07,7.92-5.02,10.59-.22.3-.44.6-.65.9-.13.18-.28.36-.43.54-2.73,3.16-2.37,5.26,2.38,14.01l.51.93c1.61,2.83,3.27,5.43,4.93,7.71.06.08.12.16.17.24,2.83,4.23,4.3,3.86,5.18,3.63.06-.02.12-.03.18-.05,5.91-1.36,14.83-3.41,22.86,3.34,2.89,2.24,5.79,5.19,8.61,8.04.56.58,1.13,1.15,1.7,1.72.03.03.06.06.08.09l.32.33c2.57,2.65,5.48,5.66,7.51,9.26,0,.03.03.05.04.08,5.37,9.78,1.39,20.09-10.4,26.94Z"/>
+          <path d="M145.67,146.04l-.29-.29c-.57-.57-1.14-1.15-1.71-1.73-2.51-2.55-5.1-5.17-7.22-6.79-.11-.09-.21-.17-.32-.26-1.87-1.61-3.81-1.67-9.86-.28-5.72,1.44-13.98.89-21.12-9.69-1.98-2.72-3.93-5.77-5.8-9.07-.03-.05-.05-.09-.08-.14l-.53-.98c-4.41-8.11-10.43-19.19-.79-30.63.18-.25.36-.5.54-.75,1.01-1.38,2.15-2.95,2.3-3.85.37-3.11-.56-6.86-1.55-10.84-.39-1.56-.79-3.17-1.13-4.81-1.51-7.64-3.52-8.64-3.54-8.65-.37-.17-2.1-.18-5.6,1.81-1.16.69-2.34,1.36-3.52,2.04-4.3,2.44-8.36,4.76-10.61,7.6-3.79,5.48-3.24,14.18-2.31,21.2,3.46,21.14,17.42,46.75,34,62.36,8.58,7.65,18.45,15.57,27.27,13.11,3.84-1.2,9.77-4.85,12.01-6.23.06-.04.12-.08.18-.11,6.45-3.73,5.33-6.03,4.89-6.83-1.09-1.93-3.19-4.09-5.21-6.19Z"/>
+        </svg>
+      </a>
+      <a href="https://wa.me/573006542118" class="btn-circle" aria-label="WhatsApp">
+        <svg viewBox="0 0 224.28 224.17">
+          <path d="M112.14,0C50.21,0,0,50.11,0,111.65s50.21,112.52,112.14,112.52,112.14-50.1,112.14-112.52S174.07,0,112.14,0ZM181.27,109.89c-1.33,34.29-29.49,63.3-64.07,64.18-12.39.87-24.07-1.76-34.25-7.04h-.02l-33.69,7.04c-1.52.87-2.88-.88-2.56-1.76l7.53-34.29c-5.36-9.67-8.12-21.98-7.49-34.28,1.74-34.29,30.35-62.42,65.02-64.18,39.12-.87,71.04,30.77,69.53,70.33Z"/>
+          <path d="M113.98,53.63c-29.45,0-53.42,23.74-53.42,53.62,0,10.55,3.17,20.22,8.6,29.01l-5.73,21.1,21.52-5.27c.7,0,1.42.88,2.16.88,7.9,5.27,17.07,7.91,26.87,7.91,29.45,0,53.41-24.62,53.41-53.63s-23.96-53.62-53.41-53.62ZM145.66,130.99c-.93.88-1.91,2.64-3.47,3.52-3.43,3.51-8.17,5.27-12.99,5.27-8.64-.87-20.92-6.15-31.46-16.7-10.55-10.55-15.31-22.86-16.18-30.77-.5-5.27,1.24-9.67,4.66-13.19,1.55-1.75,2.85-2.64,4.25-3.51,2.59-1.76,6.1-.89,7.08,2.63l3.54,10.56c.98,2.63.55,4.39-.73,5.27l-2.81,3.52c-1.4.87-1.63,3.51-.56,5.27,1.56,1.76,4.5,6.15,9.9,11.42,5.39,5.28,9.31,7.92,11.76,9.68,1.68.87,3.84.87,5.23,0l2.84-3.52c1.24-.88,3.08-1.76,5.98,0l10.62,3.52c2.94.87,4.11,4.39,2.34,7.03Z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/centrosinergia/" class="btn-circle" aria-label="Instagram">
+        <svg viewBox="0 0 224.27 224.17">
+          <path d="M112.14,0h0C50.21,0,0,50.11,0,112.52s50.21,111.65,112.13,111.65h0c61.93,0,112.13-50.11,112.13-111.65S174.07,0,112.14,0ZM174.57,144.17c0,16.68-14.04,30.76-30.66,30.76h-63.8c-16.61,0-30.65-14.08-30.65-30.76v-64.18c0-16.96,13.75-30.76,30.65-30.76h63.8c16.9,0,30.66,13.8,30.66,30.76v64.18Z"/>
+          <path d="M141.79,61.54h-59.55c-11.44,0-20.39,9.26-20.39,21.09v58.9c0,11.53,8.76,20.22,20.39,20.22h59.55c11.62,0,20.39-8.69,20.39-20.22v-58.9c0-11.83-8.96-21.09-20.39-21.09ZM112.07,145.05c-17.77,0-32.78-15.3-32.78-33.41s14.71-32.53,32.78-32.53,32.78,14.59,32.78,32.53-15.01,33.41-32.78,33.41ZM146.1,85.26c-4.07,0-7.26-3.08-7.26-7.02,0-4.22,3.39-7.92,7.26-7.92s7.26,3.7,7.26,7.92c0,3.94-3.19,7.02-7.26,7.02Z"/>
+          <path d="M132.47,111.64c0,11.64-9.15,21.1-20.4,21.1s-20.39-9.46-20.39-21.1c0-10.96,9.34-20.22,20.39-20.22s20.4,9.26,20.4,20.22Z"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Main Capsule Button -->
+    <a href="Sinergia - Portafolio - 2026.pdf" download="Sinergia - Portafolio - 2026.pdf" class="btn-capsule">
+      Portafolio de servicios
+    </a>
+
+    <!-- Footer Phone Number -->
+    <div class="footer-phone">
+      300 654 2118
+    </div>
+
+  </div>
+</body>
 </html>
